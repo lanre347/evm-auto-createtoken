@@ -5,7 +5,7 @@ import requests
 from solcx import compile_standard, install_solc
 
 # Connect to the Monad network via Infura RPC
-infura_url = "https://testnet-rpc.monad.xyz"
+infura_url = "https://testnet.dplabs-internal.com"
 web3 = Web3(Web3.HTTPProvider(infura_url, request_kwargs={'timeout': 60}))
 
 # Check if the connection is successful
@@ -13,7 +13,7 @@ if not web3.is_connected():
     raise Exception("Failed to connect to Monad network")
 
 # Constants
-CHAIN_ID = 10143  # Monad Chain ID
+CHAIN_ID = 688688  # Monad Chain ID
 MAX_RETRIES = 3  # Maximum retries per transaction
 
 # Solidity ERC-20 Contract Code
